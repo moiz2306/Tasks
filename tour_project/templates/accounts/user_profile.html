@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="profile-page">
+  <h2>Profile Detail</h2>
+
+  <div>
+    <strong>Username:</strong> {{ user.username }}
+  </div>
+  <div>
+    <strong>First Name:</strong> {{ user.first_name }}
+  </div>
+  <div>
+    <strong>Last Name:</strong> {{ user.last_name }}
+  </div>
+  <div>
+    <strong>Email:</strong> {{ user.email }}
+  </div>
+
+  <hr/>
+
+  <a href="{% url 'accounts:update_profile' %}" class="btn btn-secondary">Edit Profile</a>
+  <a href="{% url 'accounts:delete_profile' %}" class="btn btn-danger">Delete Profile</a>
+</div>
+{% endblock %}
